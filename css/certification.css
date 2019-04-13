@@ -1,4 +1,14 @@
+
+.certification-row {
+  display: flex;
+}
+
+.certification__column {
+  flex: 50%;
+}
+
 .certification {
+  text-align: center;
   background-color: #333333;
   padding: 8vh 0; }
   @media (min-width: 1024px) {
@@ -24,7 +34,8 @@
 
 .certification__text {
   font-size: 0.92rem;
-  color: #ff80b2; 
+  color: #ff80b2;
+  width: 300px; 
   text-align: left; }
   @media (min-width: 1024px) {
     .certification__text {
@@ -33,7 +44,7 @@
 
 .certification__image {
   padding: 5vh 0;
-  width: 100%;
+  width: 70%;
   height: auto;
   align-self: center; }
   @media (min-width: 1024px) {

@@ -7,7 +7,7 @@
     <title>Doika</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/about-us.css">
     <link rel="stylesheet" href="css/cc-icons.css">
@@ -22,18 +22,30 @@
     <link rel="stylesheet" href="css/links.css">
     <link rel="stylesheet" href="css/mission.css">
     <link rel="stylesheet" href="css/our-work.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
  </head>
 
   <body>
     <header class="header">
-      <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+      <nav> 
+        <ul class="language-switcher d-flex">
+          <li class="nav-item language-switcher__item">
+            <a class="nav-link language-switcher__item_active" href="index.html">BY</a>
+          </li>
+          <li class="nav-item language-switcher__item">
+            <a class="nav-link" href="index-ru.html">RU</a>
+          </li>
+          <li class="nav-item language-switcher__item">
+            <a class="nav-link" href="index-en.html">EN</a>
+          </li>
+        </ul>
+      </nav>
+ <div class="bar">
+    <nav id="desktop">
+      <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#about-us">што такое<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#about-us">што такое</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#our-work">плюшкі</a>
@@ -54,23 +66,53 @@
               <a class="nav-link" href="#contact-us">кантакт</a>
             </li>
           </ul>
-        </div>
+    </nav>
 
+  </div>
+  <div id="burg">
+    <a href="#">
+      <span class="bar" id="top"></span>
+      <span class="bar" id="middle"></span>
+      <span class="bar" id="bottom"></span>
+    </a>
+  </div>
 
-        <ul class="language-switcher d-flex">
-          <li class="nav-item language-switcher__item">
-            <a class="nav-link language-switcher__item_active" href="index.html">BY</a>
-          </li>
-          <li class="nav-item language-switcher__item">
-            <a class="nav-link" href="index-ru.html">RU</a>
-          </li>
-          <li class="nav-item language-switcher__item">
-            <a class="nav-link" href="index-en.html">EN</a>
-          </li>
-        </ul>
+<div class="mobile-tab">
+  <nav id="mobile">
+    <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#about-us">што такое</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-work">плюшкі</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certification">усталёўка</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#links2">ужо з намі</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#history">падтрымаць</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#links">каманда</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us">кантакт</a>
+            </li>
+          </ul>
 
+        </nav>
+      </div>
+      <script>
+        $('.mobile-tab').hide();
+        $('#burg').on('click', function () {
+        $('.mobile-tab').slideToggle(1000);
+          })
+      </script>
+      
 
-      </nav>
       <img class="header__logo img-responsive" src="img/logo.png" alt="creative commons logo"/>
       <h1 class="header__title">Doika</h1>
       <h2 class="header__subtitle">Жывіць грамадскія арганізацыі і падтрымлівае кантакт з колам прыхільнікаў.</h2>
@@ -105,7 +147,7 @@
     <section id="mission" class="mission">
       <div class="container text-center">
         <h2 class="mission__title">У чым дапамагае?</h2>
-        <div class="row">
+        <div class="mission-row">
 <!--
           <span class="mission__text_marked">Стварэнне спрыяльных умоваў для творчасці, перадачы ведаў, эканамічных адносінаў, пабудаваных на адкрытых прынцыпах, і ёсць задача праекта “Градка”.</span>
 -->
@@ -120,45 +162,95 @@
               </div>
 -->
 
-	<div id="mission__carousel" class="carousel slide" data-interval="false" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_6.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item active">
-                <img class="d-block img-fluid" src="img/slide_2.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_1.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_3.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_4.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_5.jpg" alt="Forth slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/slide_7.jpg" alt="Fifth slide">
-              </div>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_6.jpg" style="width:100%">
+    <div class="text">Жывіць грамадскія арганізацыі і падтрымлівае кантакт з колам прыхільнікаў.</div>
+  </div>
 
-            </div>
-            <a class="carousel-control-prev" href="#mission__carousel" role="button" data-slide="prev">
-             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-             <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#mission__carousel" role="button" data-slide="next">
-             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-             <span class="sr-only">Next</span>
-            </a>
-	</div>
-        <a class="button nav-link" href="https://it2donate-wordpress.falanster.by/">паспрабуй Doika</a>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_2.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
 
-        </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_1.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
 
-      </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_3.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_4.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_5.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/slide_7.jpg" style="width:100%">
+    <div class="text">усталюй Doika 1.2</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">◄</a>
+  <a class="next" onclick="plusSlides(1)">►</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+</div>
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+	 </div>
+    <a class="button nav-link" href="https://it2donate-wordpress.falanster.by/">паспрабуй Doika</a>
+    </div>
     </section>
 
 
@@ -168,117 +260,79 @@
 
 <div class="">
 
-<!--	<span class="mission__text_marked">Вы самі вызначаеце правілы збору сродкаў.</span>
--->
         <p class="">Вы самі вызначаеце правілы збору сродкаў.</p>
 
-        <div class="row flex-nowrap">
-              <div class="col-lg-4 our-work__title-image">
-
-                <img class="img-responsive" src="img/milk5.png" alt="Садавіна">
-
-              </div>
-              <div class="col-lg-4 our-work__title-image">
-                <img class="img-responsive" src="img/rocket-solid.png" alt="Садавіна">
-              </div>
-              <div class="col-lg-4 our-work__title-image">
-                <img class="img-responsive" src="img/lock484.png" alt="Садавіна">
-              </div>
-        </div>
-        <div class="row descriptions">
-          <article class="work-description col-lg-4">
+        <div class="our-work-flexbox">
+          <div class="our-work-item">
+            <img src="img/milk5.png" alt="Садавіна">
             <h3 class="work-description__title">Не трэба плаціць вялікі адсотак ад сабраных сумаў пасярэдніку.</h3>
-
-
-
-          </article>
-          <article class="work-description col-lg-4">
+          </div>
+          <div class="our-work-item">
+            <img src="img/rocket-solid.png" alt="Садавіна">
             <h3 class="work-description__title">Прасоўваючы сваю кампанію збору сродкаў, вы прасоўваеце сайт сваёй арганізацыі.</h3>
-
-
-
-          </article>
-          <article class="work-description col-lg-4">
+          </div>
+          <div class="our-work-item">
+            <img src="img/lock484.png" alt="Садавіна">
             <h3 class="work-description__title">Бяспечная праца з банкаўскімі карткамі.</h3>
-          </article>
+          </div>
         </div>
-
+</div>
 </div>
 
-	</div>
-
 <div class="mission__text_marked text-center">
-	<p class="">З Doika вашы ахвярадаўцы могуць рабіць пераводы:</spp>
+	<p class="">З Doika вашы ахвярадаўцы могуць рабіць пераводы:</p>
 
-        <div class="row flex-nowrap">
-              <div class="col-lg-4 our-work__title-image">
-
-                <img class="img-responsive" src="img/magic.png" alt="Садавіна">
-
-              </div>
-              <div class="col-lg-4 our-work__title-image">
-                <img class="img-responsive" src="img/mouse.png" alt="Садавіна">
-              </div>
-              <div class="col-lg-4 our-work__title-image">
-                <img class="img-responsive" src="img/astronaut.png" alt="Садавіна">
-              </div>
-        </div>
-        <div class="row descriptions">
-          <article class="work-description col-lg-4">
+  <div class="our-work-flexbox">
+          <div class="our-work-item">
+            <img src="img/magic.png" alt="Садавіна">
             <h3 class="work-description__title">1. максімальна хутка</h3>
-
-
-
-          </article>
-          <article class="work-description col-lg-4">
+          </div>
+          <div class="our-work-item">
+            <img src="img/mouse.png" alt="Садавіна">
             <h3 class="work-description__title">2. у мінімум клікаў</h3>
-
-
-
-          </article>
-          <article class="work-description col-lg-4">
+          </div>
+          <div class="our-work-item">
+            <img src="img/astronaut.png" alt="Садавіна">
             <h3 class="work-description__title">3. без рэгістрацыі</h3>
-          </article>
+          </div>
         </div>
 
 
 	<p class="">Для гэтага вашы прыхільнікі проста ўводзяць рэквізіты банкаўскай карткі і патрэбную суму. </p>
 
 </div>
+</div>
+</section>
 
-
-
+  
+<section id="certification" class="certification">
+  <h2 class="certification__title">Дзе можна ўсталяваць?</h2>
+    <div class="certification-row">
+      <div class="certification__column">
+        <img class="certification__image" src="img/maket.png" alt="Макет">
       </div>
-    </section>
-
-    <section id="certification" class="certification">
-      <div class="container text-center">
-        <h2 class="certification__title">Дзе можна ўсталяваць?</h2>
-        <div class="row flex-lg-row-reverse">
-          <div class="certification__text col-lg-6">
-            <p>
-              <strong>Doika</strong> - опенсорсная праграма, гэта значыць, яна бясплатная для выкарыстання і свабодная для ўнясення зменаў і распаўсюду.
-              </p>
-              <p>
-              Модуль можна ўсталяваць на сайт з любой сістэмай кіравання (напрыклад, Wordpress, Drupal, Joomla), або наогул асобна без іншых сістэмаў.
-              </p>
-              <p>
-              Для ўсталёўкі чытайце <a href="https://github.com/diglabby/doika_1.2/blob/dev/README.md" target="_blank">поўную інструкцыю</a>.
-            </p>
-          </div>
-          <div class="d-flex col-lg-6">
-            <img class="certification__image image_tablet d-lg-none" src="img/maket.png" alt="Макет">
-            <img class="certification__image image_desktop d-none d-lg-block" src="img/maket.png" alt="Макет">
-          </div>
-        </div>
-
+      <div class="certification__column certification__text">
+        <p>
+          <strong>Doika</strong> - опенсорсная праграма, гэта значыць, яна бясплатная для выкарыстання і свабодная для ўнясення зменаў і распаўсюду.
+          </p><br>
+          <p>
+          Модуль можна ўсталяваць на сайт з любой сістэмай кіравання (напрыклад, Wordpress, Drupal, Joomla), або наогул асобна без іншых сістэмаў.
+          </p><br>
+          <p>
+          Для ўсталёўкі чытайце <a href="https://github.com/diglabby/doika_1.2/blob/dev/README.md" target="_blank">поўную інструкцыю</a>.
+        </p>
       </div>
+    </div>
+</section>
+
+
 
     <section  class="certification_break" >
-      <div class="container text-center">
 
+      <div class="container text-center">
         <h2 class="certification__title">Скрынкасты працы з Doika</h2>
-	<div class="mission__text_marked text-center">
+      <div class="mission__text_marked text-center">
+
 	<div id="gif__carousel" class="carousel slide" data-interval="false" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
@@ -311,6 +365,7 @@
 	</div>
 	</div>
 </section>
+
     </section>
 
        <div class="d-flex">

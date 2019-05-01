@@ -78,3 +78,69 @@
 .certification_break {
   margin-top: 40px;
 }
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~carousel~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.gif-wrap {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+
+
+/* MAIN STYLES */
+.gif-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+  .gif-carousel__prev,
+  .gif-carousel__next {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    transform: translateY(-50%) translateZ(0);
+    cursor: pointer;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+    .gif-carousel__next {
+      left: auto;
+      right: 20px;
+    }
+
+  .gif-carousel__wrap {
+    display: flex;
+    transition: transform .5s;
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+  }
+
+    .gif-carousel__item {
+      flex: 0 0 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .gif-carousel__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }

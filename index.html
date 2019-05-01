@@ -329,7 +329,7 @@ function showSlides(n) {
 
     <section  class="certification_break" >
 
-      <div class="container text-center">
+      <!-- <div class="container text-center">
         <h2 class="certification__title">Скрынкасты працы з Doika</h2>
       <div class="mission__text_marked text-center">
 
@@ -363,7 +363,112 @@ function showSlides(n) {
             </a>
 	</div>
 	</div>
-	</div>
+	</div> -->
+
+<div class="gif-wrap">
+    <div class="gif-carousel js-carousel">
+      <button class="gif-carousel__prev js-carousel__prev">Prev</button>
+      <button class="gif-carousel__next js-carousel__next">Next</button>
+      <div class="gif-carousel__wrap js-carousel__wrap">
+        <div class="gif-carousel__item">
+          <img src="gif/doika_end_gif.gif">
+        </div>
+        <div class="gif-carousel__item">
+          <img src="gif/Install_Doika_on_website.gif">
+        </div>
+        <div class="gif-carousel__item">
+          <img src="gif/image_of_configuration.gif">
+        </div>
+        <div class="gif-carousel__item">
+          <img src="gif/Doika_GIF_How_to_use_again.gif" alt="" class="gif-carousel__img">
+        </div>
+      </div>
+    </div>
+
+<script>
+  (function() {
+  "use strict";
+
+  function Carousel(setting) {
+    if(document.querySelector(setting.wrap) === null) {
+      console.error(`Carousel not fount selector ${setting.wrap}`);
+      return;
+    }
+
+    /* Scope privates methods and properties */
+    let privates = {};
+
+
+    /* Public methods */
+    // Prev slide
+    this.prev_slide = () => {
+      --privates.opt.position;
+
+      if(privates.opt.position < 0) {
+        privates.sel.wrap.classList.add('s-notransition');
+        privates.opt.position = privates.opt.max_position - 1;
+      }
+
+      privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
+    };
+
+
+    // Next slide
+    this.next_slide = () => {
+      ++privates.opt.position;
+
+      if(privates.opt.position >= privates.opt.max_position) {
+        privates.opt.position = 0;
+      }
+
+      privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
+    };
+
+
+
+    /* Privates properties */
+    privates.setting = setting;
+
+    privates.sel = {
+      "main": document.querySelector(privates.setting.main),
+      "wrap": document.querySelector(privates.setting.wrap),
+      "children": document.querySelector(privates.setting.wrap).children,
+      "prev": document.querySelector(privates.setting.prev),
+      "next": document.querySelector(privates.setting.next)
+    };
+
+    privates.opt = {
+      "position": 0,
+      "max_position": document.querySelector(privates.setting.wrap).children.length
+    };
+
+    // Control
+    if(privates.sel.prev !== null) {
+      privates.sel.prev.addEventListener('click', () => {
+        this.prev_slide();
+      });
+    }
+
+    if(privates.sel.next !== null) {
+      privates.sel.next.addEventListener('click', () => {
+        this.next_slide();
+      });
+    }
+
+  }
+
+
+  let a = new Carousel({
+    "main": ".js-carousel",
+    "wrap": ".js-carousel__wrap",
+    "prev": ".js-carousel__prev",
+    "next": ".js-carousel__next"
+  });
+
+})();
+</script>
+
+
 </section>
 
     </section>
@@ -380,7 +485,7 @@ function showSlides(n) {
       <div class="container text-center partners">
         <h2 class="our-work__title">Ужо выкарыстоўваюць Doika</h2>
 
-     <div id="links__carousel" class="carousel slide" data-interval="false" data-ride="carousel">
+     <!-- <div id="links__carousel" class="carousel slide" data-interval="false" data-ride="carousel">
      <div class="carousel-inner" role="listbox">
 
        <div class="carousel-item active">
@@ -463,7 +568,43 @@ function showSlides(n) {
              <span class="carousel-control-next-icon" aria-hidden="true"></span>
              <span class="sr-only">Next</span>
             </a>
+      </div> -->
+
+
+<div class="link-wrap">
+    <div class="link-carousel js-carousel">
+      <button class="link-carousel__prev js-carousel__prev">Prev</button>
+      <button class="link-carousel__next js-carousel__next">Next</button>
+      <div class="link-carousel__wrap js-carousel__wrap">
+        <div class="link-carousel__item">
+          <a href="https://it.falanster.by/">
+              <img src="img/partners/lm_3.png" alt="Лічбавая Майстэрня">
+             </a>
+          <a href="https://oeec.by/">
+              <img src="img/partners/oeec_2.png" alt="Офіс еўрапейскай экспертызы і камунікацый">
+             </a>
+          <a href="https://wingsangels.by/">
+              <img src="img/partners/kryly_a.png" alt="Крылы Анёлаў">
+             </a>
+        </div>
+        <div class="link-carousel__item">
+          <a href="https://vstrecha.by/index.php">
+              <img src="img/partners/vstrecha_2.png" alt="Встреча">
+             </a>
+          <a href="https://teatrkh.by/">
+              <img src="img/partners/kh.jpg" alt="Тэатр Крылы Халопа">
+             </a>
+          <a href="http://humanlibrary.by/">
+              <img src="img/partners/humanlib_2.png" alt="Жывая Бібліятэка">
+             </a>
+          <a href="https://rodnye.by/">
+              <img src="img/partners/rodnye_2.png"  alt="Родныя Людзі">
+             </a>         
+        </div>
+        
       </div>
+    </div>
+
 
     </div>
    </section>

@@ -9,7 +9,7 @@
   height: 100vh;
   min-height: 400px;
   background-color: #d7e3f4;
-  background-image: url("/img/cow.jpg");
+  background-image: url("../img/cow.jpg");
   background-size: 100% auto;
   /*background-position: center 100%;*/
   background-repeat: no-repeat;
